@@ -67,14 +67,14 @@
     <script>
       const button = document.querySelector("button");
 
-      const mkdir = new Audio("./assets/mkdir.ogg");
+      const mkdir = new Audio("./assets/mkdir.mp3");
 
       button.addEventListener("mousedown", (e) => {
         mkdir.currentTime = 0;
         mkdir.play();
       });
 
-      button.addEventListener("ontouchstart", (e) => {
+      button.addEventListener("touchstart", (e) => {
         mkdir.currentTime = 0;
         mkdir.play();
       });
