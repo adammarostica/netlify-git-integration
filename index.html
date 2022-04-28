@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello Interwebs</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: blanchedalmond;
+      }
+      .pushable {
+        background: hsl(290deg 75% 25%);
+        border-radius: 50px;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        outline-offset: 4px;
+        box-shadow: 0 0.4rem dimgray;
+        transition: 0.3s ease-out;
+      }
+      .front {
+        display: block;
+        padding: 12px 42px;
+        border-radius: 50px;
+        font-size: 1.25rem;
+        background: hsl(290deg 100% 40%);
+        color: white;
+        transform: translateY(-6px);
+        transition: 0.3s ease-out;
+      }
+
+      .pushable:active {
+        box-shadow: none;
+      }
+
+      .pushable:hover .front {
+        transform: translateY(-8px);
+      }
+
+      .pushable:active .front {
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="pushable">
+      <span class="front"> Push me </span>
+    </button>
+    <script>
+      const button = document.querySelector("button");
+
+      const mkdir = new Audio("./mkdir.ogg");
+
+      button.addEventListener("click", (e) => {
+        mkdir.currentTime = 0;
+        mkdir.play();
+      });
+    </script>
+  </body>
+</html>
