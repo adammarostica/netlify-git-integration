@@ -11,7 +11,8 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background: blanchedalmond;
+        background: linear-gradient(0deg, #FFDF00, 20%, #f5e897);
+        text-rendering: optimizeLegibility;
       }
       .pushable {
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -23,15 +24,16 @@
         outline-offset: 4px;
         box-shadow: 0 0.6rem dimgray;
         transition: 0.1s ease-out;
+        transform: perspective(100px) rotateX(10deg);
       }
       .front {
         display: block;
         padding: 12px 42px;
         border-radius: 50px;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         background: hsl(290deg 100% 40%);
         color: white;
-        transform: translateY(-9px);
+        transform: translateY(-6px);
         transition: 0.1s ease-out;
       }
 
@@ -40,11 +42,11 @@
       }
 
       .pushable:hover .front {
-        transform: translateY(-12px);
+        transform: translateY(-8px);
       }
 
       .pushable:active .front {
-        transform: translateY(-2px);
+        transform: translateY(-1px);
       }
     </style>
   </head>
